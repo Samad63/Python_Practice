@@ -1,0 +1,17 @@
+nums = [10, 20, 30, 40, 50]
+print(nums[0], nums[2], nums[-1])
+print(nums[1:4])
+
+
+
+nums = [10, 20, 30, 40, 50]
+print(nums[::2])
+print(nums[::-1])
+
+
+a = [1, 2, 3]
+b = a
+c = a.copy()
+b.append(4)
+print(a, b, c)
+print(a is b, a is c)
