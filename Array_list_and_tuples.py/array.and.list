@@ -26,16 +26,53 @@
 
 
 
-names = ["Samad", "Arman", "Zeba"]
-marks = [82, 67, 91]
+# names = ["Samad", "Arman", "Zeba"]
+# marks = [82, 67, 91]
 
-for i, name in enumerate(names):
-    print(i, name)
+# for i, name in enumerate(names):
+#     print(i, name)
 
-for name, m in zip(names, marks):
-    print(f"{name}: {m}")
+# for name, m in zip(names, marks):
+#     print(f"{name}: {m}")
 
 
-squares = [x * x for x in range(1, 6)]
-evens = [x for x in squares if x % 2 == 0]
-print(squares, evens) 
+# squares = [x * x for x in range(1, 6)]
+# evens = [x for x in squares if x % 2 == 0]
+# print(squares, evens) 
+
+
+''' Worked examples on lists'''
+
+# Reverse a list in place
+
+def reverse_in_place(items):
+    lo, hi = 0, len(items) - 1
+    while lo < hi:
+        items[lo], items[hi] = items[hi], items[lo]
+        lo += 1
+        hi -= 1
+
+items = [1, 2, 3, 4, 5]
+print(items)
+
+
+# Rotate a list right by k
+def reverse_range(items, lo, hi):
+    while lo < hi:
+        items[lo], items[hi] = items[hi], items[lo]
+        lo += 1
+        hi -= 1
+
+
+def rotate_right(items, k):
+    n = len(items)
+    if n == 0:
+        return
+    k %= n
+    reverse_range(items, 0, n - 1)
+    reverse_range(items, 0, k - 1)
+    reverse_range(items, k, n - 1)
+
+items = [1, 2, 3, 4, 5, 6, 7]
+rotate_right(items, 2)
+print(items)
