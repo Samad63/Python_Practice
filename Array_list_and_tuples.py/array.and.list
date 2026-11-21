@@ -1,17 +1,36 @@
-nums = [10, 20, 30, 40, 50]
-print(nums[0], nums[2], nums[-1])
-print(nums[1:4])
+''' Aliasing: two names, one list'''
+
+
+# nums = [10, 20, 30, 40, 50]
+# print(nums[0], nums[2], nums[-1])
+# print(nums[1:4])
 
 
 
-nums = [10, 20, 30, 40, 50]
-print(nums[::2])
-print(nums[::-1])
+# nums = [10, 20, 30, 40, 50]
+# print(nums[::2])
+# print(nums[::-1])
 
 
-a = [1, 2, 3]
-b = a
-c = a.copy()
-b.append(4)
-print(a, b, c)
-print(a is b, a is c)
+# a = [1, 2, 3]
+# b = a
+# c = a.copy()
+# b.append(4)
+# print(a, b, c)
+# print(a is b, a is c)
+
+
+
+
+names = ["Samad", "Arman", "Zeba"]
+marks = [82, 67, 91]
+
+for i, name in enumerate(names):
+    print(i, name)
+
+for name, m in zip(names, marks):
+    print(f"{name}: {m}")
+
+squares = [x * x for x in range(1, 6)]
+evens = [x for x in squares if x % 2 == 0]
+print(squares, evens)
