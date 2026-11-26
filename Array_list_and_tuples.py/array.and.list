@@ -57,6 +57,7 @@ print(items)
 
 
 # Rotate a list right by k
+
 def reverse_range(items, lo, hi):
     while lo < hi:
         items[lo], items[hi] = items[hi], items[lo]
